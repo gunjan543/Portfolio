@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.containers
+{
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+}
+.containers .card{
+  position: relative;
+  width:300px;
+  height: 400px;
+  background: #d4a276;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.containers:hover .card
+{
+  opacity: 0.2;
+}
+
+.containers .card:hover
+{
+  opacity: 1;
+}
+
+.containers .card::before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  width:50%;
+  background: rgba(255,255,255,0.1);
+  pointer-events: none;
+}
+
+.containers .card .content{
+  padding: 30px;
+  text-align: center;
+}
+.containers .card .content h2{
+  position: absolute;
+  right: 30px;
+  font-size: 5em;
+  font-weight: 800;
+  color:#484848;
+  z-index: 1;
+  opacity: 0.1;
+  transition: 0.5s;
+}
+.containers .card:hover .content h2{
+  opacity: 1;
+  transform: translateY(-70px);
+}
+
+.containers .card .content h3
+{
+  position: relative;
+  font-size:3.5rem;
+  color:#484848;
+  z-index: 2;
+  opacity: 0.5;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+
+.containers .card:hover .content h3
+{
+  opacity: 1;
+}
+
+.containers .card .content a
+{
+  display:inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background: #fff;
+  color: #0c002b;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.containers .card span
+{
+  transition: 0.5;
+  opacity: 0;
+}
+.containers .card:hover span
+{
+  opacity: 1;
+}
+
+.containers .card span:nth-child(1)
+{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right,transparent,#484848);
+  animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1
+{
+  0%
+  {
+    transform: translateX(-100%);
+  }
+  100%
+  {
+    transform: translateX(100%);
+  }
+}
+.containers .card span:nth-child(2)
+{
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom,transparent,#484848);
+  animation: animate2 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate2
+{
+  0%
+  {
+    transform: translateY(-100%);
+  }
+  100%
+  {
+    transform: translateY(100%);
+  }
+}
+.containers .card span:nth-child(3)
+{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to left,transparent,#484848);
+  animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3
+{
+  0%
+  {
+    transform: translateX(100%);
+  }
+  100%
+  {
+    transform: translateX(-100%);
+  }
+}
+.containers .card span:nth-child(4)
+{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to top,transparent,#484848);
+  animation: animate4 2s linear infinite;
+  animation-delay: 1s;
+}
+
+@keyframes animate4
+{
+  0%
+  {
+    transform: translateY(100%);
+  }
+  100%
+  {
+    transform: translateY(-100%);
+  }
+}
+.section-headings{
+  text-align: center;
+
+}
+.section-headings h1{
+  font-size: 3.5rem;
+  color:rgba(72,72,72,.3);
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.section-headings h6{
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.section-headings h1::before,
+.section-headings h1::after{
+  content: '';
+  position: absolute;
+  bottom:-.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(72,72,72,0.75);
+}
+.section-headings h1::before{
+  width: 10rem;
+  height: 3px;
+  border-radius: .8rem;
+}
+.section-headings h1::after{
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  bottom: -1rem;
+}
+.section-headings h6{
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.has-margin-right{
+  margin-right: 5rem;
+}
