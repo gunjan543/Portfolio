@@ -25,7 +25,7 @@
   position: relative;
   width:300px;
   height: 400px;
-  background: #D7C49EFF;
+  background: #d4a276;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,8 +85,7 @@
 }
 
 
-.containers .card:hover .content h3,
-
+.containers .card:hover .content h3
 {
   opacity: 1;
 }
